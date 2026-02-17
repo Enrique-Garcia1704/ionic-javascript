@@ -1,7 +1,0 @@
-{
-  "name": "widgets-app",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
