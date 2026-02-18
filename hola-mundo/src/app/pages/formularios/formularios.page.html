@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Formularios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" placeholder="Escribe tu nombre"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-top">
+    <ion-checkbox [(ngModel)]="acepta"></ion-checkbox>
+    <ion-label class="ion-margin-start">Acepto</ion-label>
+  </ion-item>
+
+  <p class="ion-margin-top">
+    Hola: <b>{{ nombre }}</b> — Acepta: <b>{{ acepta ? 'Sí' : 'No' }}</b>
+  </p>
+</ion-content>
