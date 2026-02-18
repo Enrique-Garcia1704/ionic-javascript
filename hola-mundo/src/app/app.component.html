@@ -2,24 +2,24 @@
   <ion-menu contentId="main-content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Categorías</ion-title>
+        <ion-title>Menú</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content>
       <ion-list>
         <ion-menu-toggle auto-hide="true">
-          <ion-item routerLink="/estructura">1) Estructura y navegación</ion-item>
-          <ion-item routerLink="/listas">2) Listas y datos</ion-item>
-          <ion-item routerLink="/formularios">3) Formularios e inputs</ion-item>
-          <ion-item routerLink="/acciones">4) Botones y acciones</ion-item>
-          <ion-item routerLink="/overlays">5) Overlays</ion-item>
-          <ion-item routerLink="/visual">6) Contenido visual</ion-item>
+          <ion-item routerLink="/comunes">⭐ Widgets comunes</ion-item>
+          <ion-item routerLink="/estructura">Estructura</ion-item>
+          <ion-item routerLink="/listas">Listas</ion-item>
+          <ion-item routerLink="/formularios">Formularios</ion-item>
+          <ion-item routerLink="/acciones">Acciones</ion-item>
+          <ion-item routerLink="/overlays">Overlays</ion-item>
+          <ion-item routerLink="/visual">Visual</ion-item>
         </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>
 
-  <!-- 👇 IMPORTANTÍSIMO: el id va aquí -->
   <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

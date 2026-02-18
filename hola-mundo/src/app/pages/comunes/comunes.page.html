@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Widgets comunes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- INPUT + BUTTON -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Formulario</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Tu nombre</ion-label>
+        <ion-input [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" class="ion-margin-top" (click)="mostrarToast()">
+        Guardar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- LISTA -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lista</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let it of items">
+          <ion-label>{{ it }}</ion-label>
+          <ion-badge slot="end">NEW</ion-badge>
+        </ion-item>
+      </ion-list>
+
+      <ion-button expand="block" fill="outline" (click)="agregarItem()">
+        Agregar item
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- OVERLAYS -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Overlays</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button expand="block" (click)="mostrarAlert()">Alert</ion-button>
+      <ion-button expand="block" (click)="mostrarToast()">Toast</ion-button>
+      <ion-button expand="block" (click)="mostrarLoading()">Loading</ion-button>
+      <ion-button expand="block" (click)="abrirModal()">Modal</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- FAB -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="agregarItem()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
